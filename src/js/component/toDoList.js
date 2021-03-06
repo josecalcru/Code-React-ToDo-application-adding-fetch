@@ -19,9 +19,7 @@ export const ToDoList = () => {
 						if (inputValue === "") {
 							alert("The input cannot be empty");
 						} else {
-							//alert(inputValue);
-							//list.push(
-							setList(list.concat(inputValue)); //usar concat
+							setList(list.concat(inputValue));
 						}
 					}
 				}}
@@ -30,7 +28,12 @@ export const ToDoList = () => {
 			/>
 			<ul className="list-group">
 				{list.map((item, index) => {
-					return <li key={item.toString()}>{item}</li>;
+					return (
+						<li key={item.toString()}>
+							{item}
+							<p className="ml-auto">ss</p>
+						</li>
+					);
 				})}
 			</ul>
 			{list.length}

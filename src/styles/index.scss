@@ -11,3 +11,17 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+li {
+    width: 200px;
+    display: flex;
+  
+}
+p:hover{
+  display: inline-block;
+  align-self: flex-end;
+  max-width: 300px;
+}
+
+p{ display:none; }
+li:hover p{ display:block; }
