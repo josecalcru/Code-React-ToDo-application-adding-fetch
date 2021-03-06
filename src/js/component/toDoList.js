@@ -29,8 +29,11 @@ export const ToDoList = () => {
 				value={inputValue}
 			/>
 			<ul className="list-group">
-				<li key={inputValue.toString()}>{inputValue}</li>
+				{list.map((item, index) => {
+					return <li key={item.toString()}>{item}</li>;
+				})}
 			</ul>
+			{list.length}
 		</div>
 	);
 };
