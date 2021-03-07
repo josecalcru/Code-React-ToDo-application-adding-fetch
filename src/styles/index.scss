@@ -17,11 +17,11 @@ li {
     display: flex;
   
 }
-p:hover{
+.icon:hover{
   display: inline-block;
   align-self: flex-end;
   max-width: 300px;
 }
 
-p{ display:none; }
-li:hover p{ display:block; }
+.icon{ display:none; }
+li:hover .icon{ display:block; }

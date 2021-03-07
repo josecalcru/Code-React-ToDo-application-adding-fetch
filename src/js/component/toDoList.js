@@ -10,6 +10,12 @@ export const ToDoList = () => {
 	const [inputValue, setInputValue] = React.useState("");
 	const [list, setList] = React.useState([]);
 
+	function handleRemove(task) {
+		const newList = list.filter(item => item !== task);
+
+		setList(newList);
+	}
+
 	return (
 		<div>
 			<input
@@ -31,7 +37,11 @@ export const ToDoList = () => {
 					return (
 						<li key={item.toString()}>
 							{item}
-							<p className="ml-auto">ss</p>
+							<div className="icon ml-auto">
+								<i
+									className="fas fa-trash-alt"
+									onClick={() => handleRemove(item)}></i>
+							</div>
 						</li>
 					);
 				})}
