@@ -13,14 +13,12 @@
 */
 
 li {
-    width: 200px;
     display: flex;
   
 }
 .icon:hover{
   display: inline-block;
   align-self: flex-end;
-  max-width: 300px;
 }
 
 .icon{ display:none; }
