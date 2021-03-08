@@ -14,12 +14,10 @@
 
 li {
     display: flex;
-  
-}
-.icon:hover{
-  display: inline-block;
-  align-self: flex-end;
 }
 
 .icon{ display:none; }
-li:hover .icon{ display:block; }
+
+li:hover .icon{ display:inline-block;
+float:right; 
+}

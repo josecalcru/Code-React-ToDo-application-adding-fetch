@@ -1,11 +1,5 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-const todo = [1, 2, 3, 4, 5];
-const listItems = todo.map(todo => <li key={todo.toString()}>{todo}</li>);
-
 export const ToDoList = () => {
 	var [inputValue, setInputValue] = React.useState("");
 	const [list, setList] = React.useState([]);
@@ -52,7 +46,7 @@ export const ToDoList = () => {
 						);
 					})}
 				</ul>
-				<p>tasks to do: {list.length}</p>
+				<p>Tasks to do: {list.length}</p>
 			</div>
 		</div>
 	);
