@@ -18,6 +18,9 @@ li {
 
 .icon{ display:none; }
 
+#done{ float: left;
+}
+
 li:hover .icon{ display:inline-block;
 float:right; 
 }
