@@ -13,6 +13,15 @@ export const ToDoList = () => {
 		setList(newList);
 	}
 
+	const changeStatus = index => {
+		let newList = list;
+
+		let item = newList[index];
+		item.done = !item.done;
+		console.log(newList);
+		updateTodo(newList);
+	};
+
 	const loadList = () => {
 		fetch(url, {
 			method: "GET",
@@ -92,7 +101,6 @@ export const ToDoList = () => {
 											done: check
 										};
 										setList(list.concat(obj));
-										setCheck(false);
 										setInputValue("");
 									}
 								}
@@ -104,7 +112,6 @@ export const ToDoList = () => {
 							<label>Done</label>
 							<input
 								type="checkbox"
-								checked={check}
 								onChange={e => setCheck(e.target.checked)}
 							/>
 						</div>
@@ -120,6 +127,7 @@ export const ToDoList = () => {
 									id="done"
 									type="checkbox"
 									checked={item.done}
+									onChange={() => changeStatus(index)}
 								/>
 								<div className="icon ml-auto">
 									<i
